@@ -505,6 +505,27 @@ footer .fd{
 .ti-icon svg{width:32px;height:32px;display:block;margin:0 auto;}
 .ti-row-left .ti-icon svg{margin:0 0 0 auto;}
 .ti-row-right .ti-icon svg{margin:0 auto 0 0;}
+
+/* ── SECTION BACKGROUND IMAGES ── */
+.has-bg{position:relative;overflow:hidden;}
+.has-bg>*{position:relative;z-index:1;}
+.has-bg::before{
+  content:"";position:absolute;inset:-2px;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  pointer-events:none;z-index:0;
+  mask-image:
+    linear-gradient(to right,transparent 0%,black 15%,black 85%,transparent 100%),
+    linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);
+  mask-composite:intersect;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent 0%,black 15%,black 85%,transparent 100%),
+    linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);
+  -webkit-mask-composite:destination-in;
+}
+.bg-1::before{background-image:url('./bg-flores-1.webp');opacity:.18;}
+.bg-2::before{background-image:url('./bg-flores-2.jpeg');opacity:.22;}
+.bg-3::before{background-image:url('./bg-flores-3.jpeg');opacity:.20;}
+.bg-4::before{background-image:url('./bg-flores-4.jpeg');opacity:.22;}
 </style>
 </head>
 <body>
@@ -565,7 +586,7 @@ footer .fd{
   </div>
 
   <!-- COUNTDOWN -->
-  <section id="scd" class="rv">
+  <section id="scd" class="rv has-bg bg-1">
     <h2 class="sec-title">Cuenta Regresiva</h2>
     <div class="cd-row">
       <div class="cd-box"><div class="cd-num" id="cdD">000</div><div class="cd-lbl">Días</div></div>
@@ -615,7 +636,7 @@ footer .fd{
   </div>
 
   <!-- UBICACIÓN -->
-  <section id="subic">
+  <section id="subic" class="has-bg bg-2">
     <h2 class="sec-title rv">Ubicación</h2>
     <div class="loc-card rv" id="lc1">
       <div class="lt">Belaria Casa de Eventos</div>
@@ -662,7 +683,7 @@ footer .fd{
   </div>
 
   <!-- ITINERARIO -->
-  <section id="siti">
+  <section id="siti" class="has-bg bg-3">
     <div class="eyebrow rv">Programa del Día</div>
     <h2 class="sec-title rv">Itinerario</h2>
     <div class="tl">
@@ -789,7 +810,7 @@ footer .fd{
   </div>
 
   <!-- FAMILIA -->
-  <section id="sfam">
+  <section id="sfam" class="has-bg bg-4">
     <div class="eyebrow rv">Con la Bendición de</div>
     <h2 class="sec-title rv">Mi Familia</h2>
     <div class="fam">
