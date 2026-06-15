@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
@@ -109,20 +109,26 @@ body{
 }
 .hero-name{
   font-family:'Great Vibes',cursive;font-size:88px;line-height:.95;
-  color:var(--dark);margin-bottom:10px;
-  text-shadow:0 2px 28px rgba(0,19,95,.14);
+  margin-bottom:10px;
   transform:translateY(30px);opacity:0;
+  background:linear-gradient(180deg,#e0eaf8 0%,var(--accent) 40%,var(--dark) 70%,var(--accent) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 2px 16px rgba(0,19,95,.22)) drop-shadow(0 0 30px rgba(162,197,244,.3));
+  animation:floatGlow 4s ease-in-out infinite;
 }
 .hero-sub{
   display:flex;flex-direction:column;align-items:center;gap:4px;
   transform:translateY(16px);opacity:0;
 }
 .xv-num{
-  font-family:'Cormorant Garamond',serif;font-weight:400;
+  font-family:'Cinzel Decorative','Cormorant Garamond',serif;font-weight:700;
   font-size:68px;letter-spacing:12px;line-height:1;
-  background:linear-gradient(135deg,#00135f 0%,#00009d 45%,#00135f 100%);
+  background:linear-gradient(180deg,#e0eaf8 0%,#a2c5f4 20%,#00009d 50%,#00135f 80%,#a2c5f4 100%);
+  background-size:100% 200%;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
+  animation:shimmer 5s ease-in-out infinite;
+  filter:drop-shadow(0 0 14px rgba(162,197,244,.4)) drop-shadow(0 0 28px rgba(0,0,157,.15));
   position:relative;display:inline-block;
 }
 .xv-num::after{
@@ -142,13 +148,18 @@ body{
 /* ── SECCIONES ── */
 section{padding:64px 26px;}
 .eyebrow{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:14px;letter-spacing:5px;text-transform:uppercase;
-  color:var(--accent);text-align:center;margin-bottom:8px;
+  font-family:'Cinzel Decorative','Cormorant Garamond',serif;
+  font-size:12px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--accent);text-align:center;margin-bottom:8px;font-weight:400;
 }
 .sec-title{
   font-family:'Great Vibes',cursive;font-size:50px;
-  color:var(--dark);text-align:center;line-height:1.1;margin-bottom:30px;
+  text-align:center;line-height:1.1;margin-bottom:30px;
+  background:linear-gradient(90deg,var(--dark) 0%,var(--dark) 30%,var(--light-accent) 50%,var(--dark) 70%,var(--dark) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 6s ease-in-out infinite;
+  filter:drop-shadow(0 0 8px rgba(162,197,244,.25));
 }
 
 /* ── COUNTDOWN ── */
@@ -363,7 +374,14 @@ section{padding:64px 26px;}
 
 /* ── FOOTER ── */
 footer{padding:50px 20px;text-align:center;}
-footer .fn{font-family:'Great Vibes',cursive;font-size:50px;color:var(--dark);}
+footer .fn{
+  font-family:'Great Vibes',cursive;font-size:50px;
+  background:linear-gradient(90deg,var(--dark) 0%,var(--dark) 30%,var(--light-accent) 50%,var(--dark) 70%,var(--dark) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 6s ease-in-out infinite;
+  filter:drop-shadow(0 0 8px rgba(162,197,244,.25));
+}
 footer .fd{
   font-family:'Cormorant Garamond',serif;font-style:italic;
   font-size:14px;letter-spacing:4px;text-transform:uppercase;
@@ -426,6 +444,66 @@ footer .fd{
   50%{opacity:1;width:54px;}
 }
 #loader{display:none;}
+
+/* ── PRINCESS TYPOGRAPHY ── */
+@keyframes shimmer{
+  0%,100%{background-position:200% center;}
+  50%{background-position:-200% center;}
+}
+@keyframes sparkle{
+  0%,100%{opacity:.3;transform:scale(.8);}
+  50%{opacity:1;transform:scale(1.2);}
+}
+@keyframes floatGlow{
+  0%,100%{text-shadow:0 0 12px rgba(162,197,244,.3),0 0 28px rgba(0,0,157,.12);}
+  50%{text-shadow:0 0 20px rgba(162,197,244,.5),0 0 44px rgba(0,0,157,.2),0 0 60px rgba(162,197,244,.1);}
+}
+.shimmer-title{
+  background:linear-gradient(90deg,var(--dark) 0%,var(--dark) 30%,var(--light-accent) 50%,var(--dark) 70%,var(--dark) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 6s ease-in-out infinite;
+  filter:drop-shadow(0 0 8px rgba(162,197,244,.25));
+}
+.glow-text{animation:floatGlow 4s ease-in-out infinite;}
+.sparkle-star{
+  display:inline-block;font-size:10px;color:var(--light-accent);
+  animation:sparkle 2.2s ease-in-out infinite;vertical-align:super;margin:0 6px;
+}
+.sparkle-star:nth-child(2){animation-delay:.7s;}
+.sparkle-star:nth-child(3){animation-delay:1.4s;}
+
+/* ── VERSE / EMOTIONAL TEXT ── */
+.verse-sec{padding:52px 30px;text-align:center;}
+.verse-text{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:18px;line-height:1.8;color:var(--dark);
+  max-width:340px;margin:0 auto 28px;font-weight:500;
+}
+.verse-divider{
+  width:40px;height:1px;margin:0 auto;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5;
+}
+
+/* ── PRAYER ── */
+.prayer-sec{
+  padding:52px 28px;text-align:center;
+  background:linear-gradient(180deg,transparent 0%,rgba(224,234,248,.3) 30%,rgba(224,234,248,.3) 70%,transparent 100%);
+}
+.prayer-icon{
+  width:36px;height:36px;margin:0 auto 16px;opacity:.55;
+}
+.prayer-text{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:17px;line-height:1.85;color:var(--dark);
+  max-width:340px;margin:0 auto;font-weight:500;
+}
+
+/* ── ITINERARY ICONS ── */
+.ti-icon{margin-bottom:8px;}
+.ti-icon svg{width:32px;height:32px;display:block;margin:0 auto;}
+.ti-row-left .ti-icon svg{margin:0 0 0 auto;}
+.ti-row-right .ti-icon svg{margin:0 auto 0 0;}
 </style>
 </head>
 <body>
@@ -509,6 +587,32 @@ footer .fd{
     </svg>
   </div>
 
+  <!-- TEXTOS EMOTIVOS -->
+  <section class="verse-sec rv">
+    <span class="sparkle-star">✦</span><span class="sparkle-star">✦</span><span class="sparkle-star">✦</span>
+    <p class="verse-text" style="margin-top:16px;">
+      Hace quince años nació una hermosa niña, enviada por Dios para ser criada y formada como el más grande tesoro.
+    </p>
+    <div class="verse-divider"></div>
+    <p class="verse-text" style="margin-top:28px;">
+      Hay momentos en la vida que imaginamos, soñamos y esperamos. Uno de esos momentos ha llegado.
+    </p>
+    <span class="sparkle-star">✦</span><span class="sparkle-star">✦</span><span class="sparkle-star">✦</span>
+  </section>
+
+  <div class="orn rv">
+    <svg viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 15 Q35 5 65 15 T122 15" stroke="#00009d" stroke-width=".9" opacity=".5"/>
+      <ellipse cx="22" cy="10" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-15 22 10)"/>
+      <ellipse cx="38" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(12 38 19)"/>
+      <ellipse cx="55" cy="9"  rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-8 55 9)"/>
+      <ellipse cx="75" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(8 75 19)"/>
+      <ellipse cx="92" cy="9"  rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-12 92 9)"/>
+      <ellipse cx="108" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(6 108 19)"/>
+      <circle cx="65" cy="15" r="3" fill="#00009d" opacity=".55"/>
+    </svg>
+  </div>
+
   <!-- UBICACIÓN -->
   <section id="subic">
     <h2 class="sec-title rv">Ubicación</h2>
@@ -562,52 +666,84 @@ footer .fd{
     <h2 class="sec-title rv">Itinerario</h2>
     <div class="tl">
 
+      <!-- Ceremonia -->
       <div class="ti ti-row-left">
-        <div class="ti-left"><div class="ti-content"><div class="ti-time">18:00</div><div class="ti-ev">Ceremonia Religiosa</div></div></div>
+        <div class="ti-left"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 3v6" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M15 6h6" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M8 16l10-7 10 7" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="16" width="20" height="16" rx="1" stroke="var(--accent)" stroke-width="1.2"/><path d="M15 32v-7a3 3 0 016 0v7" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="20" r="2" stroke="var(--accent)" stroke-width="1"/></svg></div>
+          <div class="ti-time">18:00</div><div class="ti-ev">Ceremonia Religiosa</div>
+        </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"></div>
       </div>
 
+      <!-- Recepción -->
       <div class="ti ti-row-right">
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
-        <div class="ti-right"><div class="ti-content"><div class="ti-time">18:40</div><div class="ti-ev">Recepción</div></div></div>
+        <div class="ti-right"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 24l4-12 4 6 4-9 4 9 4-6 4 12" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 24h24" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="12" r="1.5" fill="var(--accent)" opacity=".5"/><circle cx="18" cy="9" r="2" fill="var(--accent)" opacity=".5"/><circle cx="26" cy="12" r="1.5" fill="var(--accent)" opacity=".5"/><path d="M8 26h20" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".4"/></svg></div>
+          <div class="ti-time">18:40</div><div class="ti-ev">Recepción</div>
+        </div></div>
       </div>
 
+      <!-- Fotos -->
       <div class="ti ti-row-left">
-        <div class="ti-left"><div class="ti-content"><div class="ti-time">19:00</div><div class="ti-ev">Fotos</div></div></div>
+        <div class="ti-left"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="12" width="26" height="17" rx="3" stroke="var(--accent)" stroke-width="1.2"/><path d="M13 12l2-4h6l2 4" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="21" r="5" stroke="var(--accent)" stroke-width="1.2"/><circle cx="18" cy="21" r="2" stroke="var(--accent)" stroke-width="1" opacity=".6"/></svg></div>
+          <div class="ti-time">19:00</div><div class="ti-ev">Fotos</div>
+        </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"></div>
       </div>
 
+      <!-- Cena -->
       <div class="ti ti-row-right">
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
-        <div class="ti-right"><div class="ti-content"><div class="ti-time">19:30</div><div class="ti-ev">Cena</div></div></div>
+        <div class="ti-right"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="19" r="9" stroke="var(--accent)" stroke-width="1.2"/><circle cx="18" cy="19" r="5.5" stroke="var(--accent)" stroke-width=".8" opacity=".4"/><path d="M9 6v10M7 6v4.5a2 2 0 004 0V6" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 6v10M25.5 6c0 3.5 3 3.5 3 0" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round"/></svg></div>
+          <div class="ti-time">19:30</div><div class="ti-ev">Cena</div>
+        </div></div>
       </div>
 
+      <!-- Brindis -->
       <div class="ti ti-row-left">
-        <div class="ti-left"><div class="ti-content"><div class="ti-time">19:40</div><div class="ti-ev">Brindis</div></div></div>
+        <div class="ti-left"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l2 12h-2M10 18v8M7 26h6" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 6l-2 12h2M26 18v8M23 26h6" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c4-2 8-2 12 0" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".5"/><circle cx="14" cy="5" r="1" fill="var(--accent)" opacity=".4"/><circle cx="18" cy="4" r=".8" fill="var(--accent)" opacity=".3"/><circle cx="22" cy="5" r="1" fill="var(--accent)" opacity=".4"/></svg></div>
+          <div class="ti-time">19:40</div><div class="ti-ev">Brindis</div>
+        </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"></div>
       </div>
 
+      <!-- Vals -->
       <div class="ti ti-row-right">
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
-        <div class="ti-right"><div class="ti-content"><div class="ti-time">19:50</div><div class="ti-ev">Vals</div></div></div>
+        <div class="ti-right"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 28c-3 0-5-2-5-5s3-5 5-5" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M24 28c3 0 5-2 5-5s-3-5-5-5" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="14" cy="12" rx="3" ry="3.5" stroke="var(--accent)" stroke-width="1.2"/><ellipse cx="22" cy="12" rx="3" ry="3.5" stroke="var(--accent)" stroke-width="1.2"/><path d="M14 15.5v3c0 1 1 2 2 2.5M22 15.5v3c0 1-1 2-2 2.5" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M16 21h4" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".5"/></svg></div>
+          <div class="ti-time">19:50</div><div class="ti-ev">Vals</div>
+        </div></div>
       </div>
 
+      <!-- Fiesta -->
       <div class="ti ti-row-left">
-        <div class="ti-left"><div class="ti-content"><div class="ti-time">20:30</div><div class="ti-ev">Fiesta</div></div></div>
+        <div class="ti-left"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 28v-10a4 4 0 014-4v0" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="24" r="4" stroke="var(--accent)" stroke-width="1.2"/><path d="M22 22v-10" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M22 12c3 0 5 1.5 5 3.5S25 19 22 19" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M22 12c2.5-.5 4 .5 4 2s-1.5 3-4 3" stroke="var(--accent)" stroke-width="1" opacity=".4"/><circle cx="18" cy="7" r="1" fill="var(--accent)" opacity=".4"/><circle cx="22" cy="5" r=".8" fill="var(--accent)" opacity=".3"/></svg></div>
+          <div class="ti-time">20:30</div><div class="ti-ev">Fiesta</div>
+        </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"></div>
       </div>
 
+      <!-- Fin -->
       <div class="ti ti-row-right">
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
-        <div class="ti-right"><div class="ti-content"><div class="ti-time">00:00</div><div class="ti-ev">Fin de la Fiesta</div></div></div>
+        <div class="ti-right"><div class="ti-content">
+          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 8a9 9 0 100 18 9 9 0 01-9-9 7 7 0 009-9z" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="1" fill="var(--accent)" opacity=".5"/><circle cx="14" cy="6" r=".8" fill="var(--accent)" opacity=".4"/><circle cx="8" cy="15" r=".6" fill="var(--accent)" opacity=".3"/><path d="M28 12l1-3 1 3M29 9v0" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"/><path d="M6 24l.7-2 .7 2M6.7 22v0" stroke="var(--accent)" stroke-width=".8" stroke-linecap="round" opacity=".6"/></svg></div>
+          <div class="ti-time">00:00</div><div class="ti-ev">Fin de la Fiesta</div>
+        </div></div>
       </div>
 
     </div>
@@ -660,8 +796,41 @@ footer .fd{
         <div class="role">Mi Mamá</div>
         <div class="names">Abigail Torres Mireles</div>
       </div>
+      <div class="flor">✦</div>
+      <div class="fam-g rv">
+        <div class="role">Mi Papá</div>
+        <div class="names">Octavio Herrera Rodríguez</div>
+      </div>
     </div>
   </section>
+
+  <!-- ORACIÓN -->
+  <section class="prayer-sec rv">
+    <div class="prayer-icon">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 4v8M14 8h8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M11 18c0 0 2-4 7-4s7 4 7 4" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M13 18v6c0 2 2 4 5 4s5-2 5-4v-6" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 28l-2 4M21 28l2 4" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <p class="prayer-text">
+      Señor, hoy elevo mi corazón en gratitud por estos 15 años de vida. Guíame siempre por el camino del bien, dame sabiduría para tomar decisiones y rodéame de amor y bendiciones en esta nueva etapa que comienzo.
+    </p>
+  </section>
+
+  <div class="orn rv">
+    <svg viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 15 Q35 5 65 15 T122 15" stroke="#00009d" stroke-width=".9" opacity=".5"/>
+      <ellipse cx="22" cy="10" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-15 22 10)"/>
+      <ellipse cx="38" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(12 38 19)"/>
+      <ellipse cx="55" cy="9"  rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-8 55 9)"/>
+      <ellipse cx="75" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(8 75 19)"/>
+      <ellipse cx="92" cy="9"  rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(-12 92 9)"/>
+      <ellipse cx="108" cy="19" rx="5" ry="2.4" fill="#00009d" opacity=".4" transform="rotate(6 108 19)"/>
+      <circle cx="65" cy="15" r="3" fill="#00009d" opacity=".55"/>
+    </svg>
+  </div>
 
   <!-- CROSSFADE GALERÍA -->
   <section id="sgal">
@@ -698,7 +867,7 @@ footer .fd{
         </div>
         <div class="gift-body">
           <div class="gb-name">Lluvia de Sobres</div>
-          <div class="gb-desc">Tu presencia es el mejor regalo. Si deseas obsequiarme algo, habrá un buzón en el evento.</div>
+          <div class="gb-desc">Tu presencia es el mejor regalo que puedo recibir. Si además deseas bendecirme con un detalle, habrá un buzón de sobres y una mesa de obsequios esperando en el evento.</div>
         </div>
       </div>
     </div>
