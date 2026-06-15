@@ -502,9 +502,9 @@ footer .fd{
 
 /* ── ITINERARY ICONS ── */
 .ti-icon{margin-bottom:8px;}
-.ti-icon svg{width:32px;height:32px;display:block;margin:0 auto;}
-.ti-row-left .ti-icon svg{margin:0 0 0 auto;}
-.ti-row-right .ti-icon svg{margin:0 auto 0 0;}
+.ti-icon svg,.ti-icon img{width:32px;height:32px;display:block;margin:0 auto;object-fit:contain;}
+.ti-row-left .ti-icon svg,.ti-row-left .ti-icon img{margin:0 0 0 auto;}
+.ti-row-right .ti-icon svg,.ti-row-right .ti-icon img{margin:0 auto 0 0;}
 
 /* ── SECTION BACKGROUND IMAGES ── */
 .has-bg{position:relative;overflow:hidden;}
@@ -691,7 +691,7 @@ footer .fd{
       <!-- Ceremonia -->
       <div class="ti ti-row-left">
         <div class="ti-left"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2v3" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/><path d="M16.5 3.5h3" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/><path d="M18 5v3" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><path d="M7 16l11-8 11 8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="16" width="18" height="17" rx=".5" stroke="var(--accent)" stroke-width="1.3"/><path d="M15 33v-7a3 3 0 016 0v7" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="22" r="1.2" fill="var(--accent)" opacity=".4"/><path d="M12 20v4M24 20v4" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".4"/></svg></div>
+          <div class="ti-icon"><img src="icon-ceremonia.png" alt="Ceremonia" width="32" height="32"></div>
           <div class="ti-time">18:00</div><div class="ti-ev">Ceremonia Religiosa</div>
         </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
@@ -703,7 +703,7 @@ footer .fd{
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 22c2-6 4-10 6-13" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M14 9c1-2 2.5-3.5 4-4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M18 5c1.5.5 3 2 4 4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M22 9c2 3 4 7 6 13" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M8 22h20" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/><circle cx="11" cy="12" r="1.5" fill="var(--accent)" opacity=".35"/><circle cx="18" cy="5" r="1.8" fill="var(--accent)" opacity=".35"/><circle cx="25" cy="12" r="1.5" fill="var(--accent)" opacity=".35"/><circle cx="14.5" cy="8" r="1" fill="var(--accent)" opacity=".25"/><circle cx="21.5" cy="8" r="1" fill="var(--accent)" opacity=".25"/><path d="M10 24h16" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" opacity=".3"/></svg></div>
+          <div class="ti-icon"><img src="icon-recepcion.png" alt="Recepción" width="32" height="32"></div>
           <div class="ti-time">18:40</div><div class="ti-ev">Recepción</div>
         </div></div>
       </div>
@@ -711,7 +711,7 @@ footer .fd{
       <!-- Fotos -->
       <div class="ti ti-row-left">
         <div class="ti-left"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="11" width="28" height="19" rx="3" stroke="var(--accent)" stroke-width="1.3"/><path d="M13 11l1.5-4h7l1.5 4" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="21" r="5.5" stroke="var(--accent)" stroke-width="1.3"/><circle cx="18" cy="21" r="2.5" stroke="var(--accent)" stroke-width="1" opacity=".5"/><circle cx="18" cy="21" r=".8" fill="var(--accent)" opacity=".4"/><circle cx="27" cy="15" r="1.5" stroke="var(--accent)" stroke-width="1" opacity=".5"/></svg></div>
+          <div class="ti-icon"><img src="icon-fotos.png" alt="Fotos" width="32" height="32"></div>
           <div class="ti-time">19:00</div><div class="ti-ev">Fotos</div>
         </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
@@ -723,7 +723,7 @@ footer .fd{
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="18" cy="28" rx="10" ry="2" stroke="var(--accent)" stroke-width="1.2" opacity=".3"/><rect x="11" y="22" width="14" height="6" rx="1" stroke="var(--accent)" stroke-width="1.3"/><rect x="13" y="16" width="10" height="6" rx="1" stroke="var(--accent)" stroke-width="1.3"/><rect x="15" y="10" width="6" height="6" rx="1" stroke="var(--accent)" stroke-width="1.3"/><path d="M18 7v3" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/><circle cx="18" cy="5.5" r="1.5" fill="var(--accent)" opacity=".4"/><path d="M14 19h8" stroke="var(--accent)" stroke-width=".8" stroke-linecap="round" opacity=".35"/><path d="M12 25h12" stroke="var(--accent)" stroke-width=".8" stroke-linecap="round" opacity=".35"/></svg></div>
+          <div class="ti-icon"><img src="icon-cena.png" alt="Cena" width="32" height="32"></div>
           <div class="ti-time">19:30</div><div class="ti-ev">Cena</div>
         </div></div>
       </div>
@@ -731,7 +731,7 @@ footer .fd{
       <!-- Brindis -->
       <div class="ti ti-row-left">
         <div class="ti-left"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 8l3.5 12" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M9 8c2 4 6 6 9 6" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M12.5 20v7M10 27h5" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M27 8l-3.5 12" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M27 8c-2 4-6 6-9 6" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M23.5 20v7M21 27h5" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><circle cx="11" cy="5" r="1.2" fill="var(--accent)" opacity=".35"/><circle cx="18" cy="3.5" r="1" fill="var(--accent)" opacity=".25"/><circle cx="25" cy="5" r="1.2" fill="var(--accent)" opacity=".35"/></svg></div>
+          <div class="ti-icon"><img src="icon-brindis.png" alt="Brindis" width="32" height="32"></div>
           <div class="ti-time">19:40</div><div class="ti-ev">Brindis</div>
         </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
@@ -743,7 +743,7 @@ footer .fd{
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 10h8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M13 10c-1 .5-2 1.5-2 3v1h14v-1c0-1.5-1-2.5-2-3" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 14l-4 18h22l-4-18" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 14c-1 6-2.5 12-3 18" stroke="var(--accent)" stroke-width=".8" opacity=".3"/><path d="M22 14c1 6 2.5 12 3 18" stroke="var(--accent)" stroke-width=".8" opacity=".3"/><path d="M16 8v2M20 8v2" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round"/><path d="M15 6c1-2 2-3 3-3s2 1 3 3" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" opacity=".5"/></svg></div>
+          <div class="ti-icon"><img src="icon-vals.png" alt="Vals" width="32" height="32"></div>
           <div class="ti-time">19:50</div><div class="ti-ev">Vals</div>
         </div></div>
       </div>
@@ -751,7 +751,7 @@ footer .fd{
       <!-- Fiesta -->
       <div class="ti ti-row-left">
         <div class="ti-left"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="8" r="4" stroke="var(--accent)" stroke-width="1.3"/><path d="M18 12v4" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/><path d="M18 16c0 2-4 4-4 8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M18 16c0 2 4 4 4 8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M14 24c-2 2-3 5-3 8h14c0-3-1-6-3-8" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 28h6" stroke="var(--accent)" stroke-width=".8" stroke-linecap="round" opacity=".35"/><circle cx="13" cy="6" r=".8" fill="var(--accent)" opacity=".3"/><circle cx="23" cy="6" r=".8" fill="var(--accent)" opacity=".3"/><circle cx="18" cy="4" r=".6" fill="var(--accent)" opacity=".25"/></svg></div>
+          <div class="ti-icon"><img src="icon-fiesta.png" alt="Fiesta" width="32" height="32"></div>
           <div class="ti-time">20:30</div><div class="ti-ev">Fiesta</div>
         </div></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
@@ -763,7 +763,7 @@ footer .fd{
         <div class="ti-left"></div>
         <div class="ti-center"><div class="ti-dot"></div></div>
         <div class="ti-right"><div class="ti-content">
-          <div class="ti-icon"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="13" cy="27" rx="3.5" ry="3.5" stroke="var(--accent)" stroke-width="1.3"/><ellipse cx="25" cy="27" rx="3.5" ry="3.5" stroke="var(--accent)" stroke-width="1.3"/><path d="M16.5 27h5" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/><path d="M9.5 27c-3 0-4-1-4-3 0-3 3-6 7-8l3-3c1-1 3-2 5-2s4 1 5 3l2 3c3 2 5 4 5 7 0 2-1 3-3 3" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 11c-.5-2 0-4 1.5-5s3-.5 3 1" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity=".5"/><circle cx="13" cy="27" r="1.2" fill="var(--accent)" opacity=".3"/><circle cx="25" cy="27" r="1.2" fill="var(--accent)" opacity=".3"/></svg></div>
+          <div class="ti-icon"><img src="icon-fin.png" alt="Fin" width="32" height="32"></div>
           <div class="ti-time">00:00</div><div class="ti-ev">Fin de la Fiesta</div>
         </div></div>
       </div>
