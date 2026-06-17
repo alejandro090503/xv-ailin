@@ -510,26 +510,45 @@ footer .fd{
 .has-bg{position:relative;overflow:hidden;}
 .has-bg>*{position:relative;z-index:1;}
 .has-bg::before{
-  content:"";position:absolute;inset:-2px;
+  content:"";position:absolute;inset:0;
   background-size:cover;background-position:center;background-repeat:no-repeat;
   pointer-events:none;z-index:0;
-  mask-image:
-    linear-gradient(to right,transparent 0%,black 15%,black 85%,transparent 100%),
-    linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);
-  mask-composite:intersect;
-  -webkit-mask-image:
-    linear-gradient(to right,transparent 0%,black 15%,black 85%,transparent 100%),
-    linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);
-  -webkit-mask-composite:destination-in;
 }
-.bg-1::before{background-image:url('./bg-navy-1.jpg');opacity:.28;}
-.bg-2::before{background-image:url('./bg-navy-2.jpg');opacity:.22;}
-.bg-3::before{background-image:url('./bg-navy-3.jpg');opacity:.25;}
-.bg-4::before{background-image:url('./bg-navy-4.jpg');opacity:.24;}
-.bg-5::before{background-image:url('./bg-navy-5.jpg');opacity:.26;}
-.bg-6::before{background-image:url('./bg-navy-6.jpg');opacity:.28;}
-.bg-7::before{background-image:url('./bg-navy-7.jpg');opacity:.25;}
-.bg-8::before{background-image:url('./bg-navy-8.jpg');opacity:.22;}
+.bg-1::before{background-image:url('./bg-navy-1.jpg');opacity:.55;}
+.bg-2::before{background-image:url('./bg-navy-2.jpg');opacity:.45;}
+.bg-3::before{background-image:url('./bg-navy-3.jpg');opacity:.50;}
+.bg-4::before{background-image:url('./bg-navy-4.jpg');opacity:.48;}
+.bg-5::before{background-image:url('./bg-navy-5.jpg');opacity:.50;}
+.bg-6::before{background-image:url('./bg-navy-6.jpg');opacity:.55;}
+.bg-7::before{background-image:url('./bg-navy-7.jpg');opacity:.50;}
+.bg-8::before{background-image:url('./bg-navy-8.jpg');opacity:.45;}
+
+/* ── TEXT READABILITY OVER BACKGROUNDS ── */
+.has-bg .sec-title,
+.has-bg .eyebrow{text-shadow:0 0 12px rgba(255,255,255,.9),0 0 24px rgba(255,255,255,.6);}
+.has-bg p,
+.has-bg blockquote,
+.has-bg cite,
+.has-bg .ti-label,
+.has-bg .ti-time,
+.has-bg .ti-ev,
+.has-bg .cd-label,
+.has-bg .cd-num,
+.has-bg .cd-unit,
+.has-bg .fam-name,
+.has-bg .fam-role,
+.has-bg .rsvp-date,
+.has-bg .gb-name,
+.has-bg .gb-desc,
+.has-bg .dc-note,
+.has-bg .cal-label{text-shadow:0 0 8px rgba(255,255,255,.85),0 0 16px rgba(255,255,255,.5);}
+.has-bg .cd-row{background:rgba(255,255,255,.45);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border-radius:12px;padding:10px 6px;}
+.has-bg .gift-card,
+.has-bg .rsvp-card{background:rgba(255,255,255,.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:18px;padding:24px;}
+.verse-sec.has-bg blockquote,
+.verse-sec.has-bg p,
+.prayer-sec.has-bg blockquote,
+.prayer-sec.has-bg p{background:rgba(255,255,255,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:14px;padding:20px 18px;}
 </style>
 </head>
 <body>
