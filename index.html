@@ -522,16 +522,14 @@ footer .fd{
     linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);
   -webkit-mask-composite:destination-in;
 }
-.bg-1::before{background-image:url('./bg-flores-1.webp');opacity:.18;}
-.bg-2::before{background-image:url('./bg-flores-2.jpeg');opacity:.22;}
-.bg-3::before{background-image:url('./bg-flores-3.jpeg');opacity:.20;}
-.bg-4::before{background-image:url('./bg-flores-4.jpeg');opacity:.22;}
-.bg-5::before{background-image:url('./bg-flores-5.jpg');opacity:.20;}
-.bg-6::before{background-image:url('./bg-flores-6.jpg');opacity:.22;}
-.bg-7::before{background-image:url('./bg-flores-7.jpg');opacity:.20;}
-.bg-8::before{background-image:url('./bg-flores-8.jpg');opacity:.22;}
-.bg-9::before{background-image:url('./bg-flores-9.jpg');opacity:.18;}
-.bg-10::before{background-image:url('./bg-flores-10.jpg');opacity:.20;}
+.bg-1::before{background-image:url('./bg-navy-1.jpg');opacity:.28;}
+.bg-2::before{background-image:url('./bg-navy-2.jpg');opacity:.22;}
+.bg-3::before{background-image:url('./bg-navy-3.jpg');opacity:.25;}
+.bg-4::before{background-image:url('./bg-navy-4.jpg');opacity:.24;}
+.bg-5::before{background-image:url('./bg-navy-5.jpg');opacity:.26;}
+.bg-6::before{background-image:url('./bg-navy-6.jpg');opacity:.28;}
+.bg-7::before{background-image:url('./bg-navy-7.jpg');opacity:.25;}
+.bg-8::before{background-image:url('./bg-navy-8.jpg');opacity:.22;}
 </style>
 </head>
 <body>
@@ -885,7 +883,7 @@ footer .fd{
   </div>
 
   <!-- MESA DE REGALOS -->
-  <section class="rv has-bg bg-9" id="sgifts">
+  <section class="rv has-bg bg-6" id="sgifts">
     <div class="eyebrow">Con Cariño</div>
     <h2 class="sec-title">Mesa de Regalos</h2>
     <div class="gift-grid">
@@ -915,7 +913,7 @@ footer .fd{
   </div>
 
   <!-- RSVP -->
-  <section class="rv has-bg bg-10" id="srsvp">
+  <section class="rv has-bg bg-5" id="srsvp">
     <div class="eyebrow">Confirma tu Asistencia</div>
     <h2 class="sec-title">R.S.V.P.</h2>
     <div class="rsvp-card">
@@ -1155,6 +1153,27 @@ fab.addEventListener('click',()=>{
   if(playing){audio.play().catch(()=>{});fab.style.background='var(--dark)';}
   else{audio.pause();fab.style.background='var(--accent)';}
 });
+
+/* ── SCROLL TEXT ENTRANCE ANIMATIONS ── */
+(function(){
+  const animEls = document.querySelectorAll('.sec-title, .eyebrow, .verse-sec blockquote, .verse-sec cite, .rsvp-card, .gift-card, .prayer-sec blockquote, .prayer-sec cite, .fam-col, .ti-row-left, .ti-row-right, .cd-row, .cd-count, #scd p, #subic p, .cal-btn, .rsvp-date, .btn-wa, #sfam h2, #sgifts .gb-desc');
+  animEls.forEach(function(el){
+    gsap.fromTo(el,
+      {y:40, opacity:0},
+      {y:0, opacity:1, duration:0.9, ease:'power2.out',
+        scrollTrigger:{trigger:el, start:'top 90%', once:true}
+      }
+    );
+  });
+  document.querySelectorAll('.dot-wrap').forEach(function(el,i){
+    gsap.fromTo(el,
+      {scale:0, opacity:0},
+      {scale:1, opacity:1, duration:0.7, delay:i*0.12, ease:'back.out(1.7)',
+        scrollTrigger:{trigger:el, start:'top 92%', once:true}
+      }
+    );
+  });
+})();
 </script>
 </body>
 </html>
