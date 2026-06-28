@@ -32,8 +32,13 @@ body{
   font-family:'Lato',sans-serif;font-weight:400;font-size:16px;
   color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;
 }
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:url('./fondo-acuarela.jpg') center top/cover no-repeat;
+  opacity:.62;
+}
 
-.wrap{max-width:440px;margin:0 auto;background:var(--bg);position:relative;overflow:clip;z-index:1;}
+.wrap{max-width:440px;margin:0 auto;background:transparent;position:relative;overflow:clip;z-index:1;}
 
 /* ── TIPOGRAFÍA EDITORIAL ── */
 .script{font-family:'Great Vibes',cursive;font-weight:400;}
@@ -65,14 +70,8 @@ body{
 
 section{padding:62px 26px;position:relative;}
 
-/* ── FLORAL FRAME (esquinas azules reutilizable) ── */
-.floral{position:relative;}
-.floral>.fcontent{position:relative;z-index:2;}
-.floral .fl{position:absolute;z-index:1;pointer-events:none;width:44%;max-width:185px;height:auto;opacity:.96;}
-.fl-tl{top:0;left:0;}
-.fl-tr{top:0;right:0;}
-.fl-bl{bottom:0;left:0;}
-.fl-br{bottom:0;right:0;}
+/* contenido de secciones (sobre el fondo acuarela ambiental) */
+.fcontent{position:relative;z-index:2;}
 
 /* ── LOADER ── */
 #loader{
@@ -323,9 +322,6 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
     </div>
   </section>
 
-  <!-- ORNAMENTO -->
-  <div class="orn rv"><img src="./separador.png" alt="" loading="lazy"></div>
-
   <!-- FECHA -->
   <div class="fecha-sec rv">
     <div class="fecha-line">
@@ -337,9 +333,7 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
 
   <!-- FRASE INICIAL -->
   <section style="padding-top:40px;">
-    <div class="intro-card floral rv">
-      <img class="fl fl-tr" src="./flores-tr.png" alt="" loading="lazy">
-      <img class="fl fl-bl" src="./flores-bl.png" alt="" loading="lazy">
+    <div class="intro-card rv">
       <div class="intro-tiara"><img src="./tiara.svg" alt=""></div>
       <div class="intro-text">
         <p class="lead">Con el corazón lleno de ilusión y una sonrisa que no puedo ocultar, llega un día que soñé desde niña. Un día rodeado de amor, abrazos sinceros y momentos que se quedarán guardados para siempre.</p>
@@ -420,9 +414,7 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
   </section>
 
   <!-- ITINERARIO -->
-  <section id="siti" class="floral">
-    <img class="fl fl-tl" src="./flores-tl.png" alt="" loading="lazy">
-    <img class="fl fl-br" src="./flores-br.png" alt="" loading="lazy">
+  <section id="siti">
     <div class="fcontent">
       <div class="eyebrow rv">Programa del Día</div>
       <h2 class="sec-title rv">Itinerario</h2>
@@ -469,9 +461,7 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
   </section>
 
   <!-- MESA DE REGALOS -->
-  <section id="sgifts" class="floral">
-    <img class="fl fl-tr" src="./flores-tr.png" alt="" loading="lazy">
-    <img class="fl fl-bl" src="./flores-bl.png" alt="" loading="lazy">
+  <section id="sgifts">
     <div class="fcontent">
       <div class="eyebrow rv">Con Cariño</div>
       <h2 class="sec-title rv">Mesa de Regalos</h2>
