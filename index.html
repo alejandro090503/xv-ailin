@@ -222,6 +222,10 @@ section{padding:62px 26px;position:relative;}
 .cf-label{position:absolute;top:42px;left:0;right:0;z-index:3;text-align:center;}
 .cf-label .sec-title{margin-bottom:0;}
 
+/* ── FOTO DESTACADA (caballo, horizontal) ── */
+.feat-photo{padding:34px 22px 16px;}
+.feat-photo img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 12px 40px rgba(0,19,95,.16);border:1px solid rgba(162,197,244,.4);}
+
 /* ── ÁLBUM / COMPARTE TUS FOTOS ── */
 .album{position:relative;overflow:hidden;padding:0;}
 .album-bg{position:absolute;inset:0;background:url('./foto-perfil.jpg') center 20%/cover no-repeat;}
@@ -469,6 +473,9 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
       <div class="gift-sobre-label rv">Lluvia de Sobres</div>
       <div class="silver-circle rv"><img src="./ic-sobre.svg" alt="Sobre"></div>
       <p class="gift-sobre-desc rv">Es la tradición de obsequiar a la quinceañera un sobre con un detalle en efectivo el día del evento.</p>
+      <div class="gift-sobre-label rv" style="margin-top:42px;">Obsequio de tu Agrado</div>
+      <div class="silver-circle rv"><img src="./ic-regalo.svg" alt="Regalo"></div>
+      <p class="gift-sobre-desc rv">O bien, puedes obsequiarme un detalle de tu agrado; lo recibiré con todo el cariño.</p>
     </div>
   </section>
 
@@ -477,19 +484,16 @@ footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14
     <div class="cf-frame">
       <div class="cf-label"><h2 class="sec-title">Momentos</h2></div>
       <img class="cf-img" id="cfImg1" src="./foto-banca.jpg" alt="Ailin Betzabé">
-      <img class="cf-img" id="cfImg2" src="./foto-caballo.jpg" alt="Ailin Betzabé">
+      <img class="cf-img" id="cfImg2" src="./foto-perfil.jpg" alt="Ailin Betzabé">
       <img class="cf-img" id="cfImg3" src="./foto-escaleras.jpg" alt="Ailin Betzabé">
       <div class="cf-fade-top"></div>
       <div class="cf-fade-bot"></div>
     </div>
   </section>
 
-  <!-- SOLO ADULTOS -->
-  <section class="kids rv">
-    <div class="kids-icon"><img src="./ic-copa.svg" alt=""></div>
-    <div class="eyebrow">Con Respeto</div>
-    <h2 class="sec-title">Solo Adultos</h2>
-    <p class="kids-text">Con todo el cariño, hemos decidido que esta celebración sea exclusiva para adultos. Confiamos en que puedas disfrutar de esta noche con nosotros sin preocupaciones. Gracias por tu comprensión.</p>
+  <!-- FOTO DESTACADA (caballo) -->
+  <section class="feat-photo rv">
+    <img src="./foto-caballo.jpg" alt="Ailin Betzabé montando a caballo negro" loading="lazy">
   </section>
 
   <!-- ÁLBUM COMPARTIDO -->
